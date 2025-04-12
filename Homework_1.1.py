@@ -17,7 +17,7 @@ def total_salary(path):   # задаємо функцію
 
                     try:
                         name, salary = line.split(",")   # Розділяємо рядок на ім’я розробника та його зарплату
-                        total += int(salary)    # Перетворюємо зарплату із строки в число
+                        total += float(salary)    # Перетворюємо зарплату із строки в число
                         count += 1
 
 
@@ -29,7 +29,7 @@ def total_salary(path):   # задаємо функцію
                 return (0, 0)
 
 
-            average = int(total / count)   # Обчислюємо середню зарплату
+            average = (total / count)   # Обчислюємо середню зарплату
             print(f"Загальна сума заробітної плати: {total}, Середня заробітна плата: {average}")
             return (total, average)
     except FileNotFoundError:    # Обробка помилки, якщо файл не знайдено
